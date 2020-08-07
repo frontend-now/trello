@@ -6,6 +6,13 @@
   "plugins": [
     ["@babel/transform-runtime", {
       "regenerator": true
+    }],
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "components": "./src/components",
+        "actions": "./src/actions"
+      }
     }]
   ]
 }

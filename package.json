@@ -6,17 +6,20 @@
   "scripts": {
     "start": "cross-env NODE_ENV='development' webpack-dev-server --config ./webpack.config.js --mode development",
     "build": "cross-env NODE_ENV='production' webpack --config webpack.config.js --mode production --env.NODE_ENV=production",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "jest --config ./jest.config.js --passWithNoTests",
+    "test:watch": "jest --config ./jest.config.js --watch"
   },
   "keywords": [],
   "author": "",
   "devDependencies": {
-    "@babel/core": "^7.8.7",
+    "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
+    "@testing-library/react": "^10.4.8",
     "babel-eslint": "^10.0.3",
+    "babel-jest": "^26.2.2",
     "babel-loader": "^8.0.6",
-    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-module-resolver": "^4.0.0",
     "css-loader": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
@@ -25,8 +28,10 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.2.2",
     "react-hot-loader": "^4.12.19",
     "style-loader": "^1.2.1",
+    "@testing-library/jest-dom": "^5.11.2",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
